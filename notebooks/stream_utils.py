@@ -272,7 +272,7 @@ def overplot_isochrone(ax, iso_dir, age, Z, mu, g_bins, **kwargs):
 # ---------------------------------------------------------------------------
 
 def _delve_err(g):
-    """DELVE DR3 photometric error model σ(g)."""
+    """DES photometric error model σ(g)."""
     return 0.00109 + np.exp((g - 27.09) / 1.09)
 
 
