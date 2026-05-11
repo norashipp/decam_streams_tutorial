@@ -15,17 +15,26 @@ pip install numpy pandas matplotlib healpy skyproj ipywidgets scipy jupyter
 
 ## Get the data
 
-The catalog file is too large for git. Download it before running the notebook:
+Download the data folder from Google Drive and place its contents at `data/` in the repo root:
 
-**If you have cluster access** (e.g. UW `epyc`), run the download script:
-```bash
-python scripts/download_atlas_cutout.py
-# writes data/atlas_cutout.parquet (~XXX MB)
+**[Download data from Google Drive](https://drive.google.com/drive/folders/1wd1SonTZKj-H6hBuchB4ko4vCiiaJP5Y?usp=sharing)**
+
+After downloading, your directory should look like:
+
+```
+data/
+    atlas_cutout.parquet
+    atlas_track.npy
+    aliqa_uma_track.npy
+    isochrones/
+        iso_a10.0_z0.00010.dat
+        ...
 ```
 
-**Otherwise**, download the pre-made cutout from [link TBD] and place it at `data/atlas_cutout.parquet`.
-
-The other data files (stream tracks, isochrones) are included in the repo.
+**If you have cluster access** (e.g. UW `epyc`), you can regenerate `atlas_cutout.parquet` yourself instead:
+```bash
+python scripts/download_atlas_cutout.py
+```
 
 ## Run the tutorial
 
@@ -39,11 +48,11 @@ jupyter notebook notebooks/tutorial_aau_stream.ipynb
 notebooks/
     tutorial_aau_stream.ipynb     # main tutorial
     stream_utils.py               # helper functions (coordinate transforms, Hess diagrams, etc.)
-data/
-    atlas_cutout.parquet          # NOT in git — download separately (see above)
-    atlas_track.npy               # ATLAS stream track (RA, Dec)
-    aliqa_uma_track.npy           # Aliqa Uma stream track (RA, Dec)
-    isochrones/                   # PARSEC Bressan2012 isochrone files (DES/DECam)
+data/                             # NOT in git — download from Google Drive (see above)
+    atlas_cutout.parquet
+    atlas_track.npy
+    aliqa_uma_track.npy
+    isochrones/
 scripts/
     download_atlas_cutout.py      # download ATLAS+Aliqa Uma cutout from DELVE DR3 via LSDB
 ```
