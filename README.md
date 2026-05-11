@@ -35,7 +35,7 @@ data/
 ## Run the tutorial
 
 ```bash
-jupyter notebook notebooks/tutorial_aau_stream.ipynb
+jupyter lab notebooks/tutorial_aau_stream.ipynb
 ```
 
 ## Repository layout
