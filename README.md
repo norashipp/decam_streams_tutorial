@@ -1,6 +1,6 @@
 # Mapping the Milky Way Stellar Halo: Discovering the ATLAS Stream
 
-Tutorial notebook for the LSST DA Regional Workshop — Near-Field Cosmology session.
+Tutorial notebook for Science with LSST: From Transients to Cosmology.
 
 ## Setup
 
