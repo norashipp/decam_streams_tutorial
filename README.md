@@ -31,10 +31,6 @@ data/
         ...
 ```
 
-**If you have cluster access** (e.g. UW `epyc`), you can regenerate `atlas_cutout.parquet` yourself instead:
-```bash
-python scripts/download_atlas_cutout.py
-```
 
 ## Run the tutorial
 
