@@ -78,6 +78,10 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Large data files — download separately (see scripts/download_atlas_cutout.py)
+data/*.parquet
+data/*.parq
+
 # IPython
 profile_default/
 ipython_config.py
